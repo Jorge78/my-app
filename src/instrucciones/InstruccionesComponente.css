@@ -1,0 +1,83 @@
+#instrucciones{
+  position: absolute;
+  /* background-color: #e2e3e4; */
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: black;
+  z-index: 2;
+}
+  
+  .left{
+    text-align: left;
+  }
+  
+  .center{
+    text-align: center;
+  }
+  
+  .b{
+    font-weight: bold;
+  }
+  
+  .font10{
+    font-size: 10px;
+  }
+  
+  .font12{
+    font-size: 12px;
+  }
+  
+  .margin10{
+    margin: 10px;
+  }
+  
+  .marginLeft10{
+    margin-left: 10px;
+  }
+  
+  .marginTop20{
+    margin-top: 20px;
+  }
+  
+  .contLinea{
+    width: 100%;
+  }
+  
+  .sinColor{
+    border: 1px solid black;
+  }
+  
+  .colorVerde{
+    background: rgb(103, 168, 42);
+  }
+  
+  .colorAmarillo{
+    background: rgb(197, 178, 9);
+  }
+  
+  .colorGris{
+    background: grey;
+  }
+  
+  .contLetra{
+    width: 16%;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 3px;
+  }
+  
+  .contLetra div{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  #btnJugar{
+    width: 130px !important;
+    height: 25px !important;
+    background: rgb(103, 168, 42) !important;
+    border: rgb(103, 168, 42) !important;
+    border-radius: 5px !important;
+    color: white !important;
+    font-weight: bold !important;
+  }
