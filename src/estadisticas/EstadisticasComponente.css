@@ -1,0 +1,28 @@
+#estadisticas{
+  position: absolute;
+  width: 20%;
+  /* background-color: #e2e3e4; */
+  border: 1px solid gray;
+  border-radius: 5px;
+  color: black;
+  z-index: 3;
+}
+
+#contDatos{
+  width: 90%;
+}
+
+#btnAceptar{
+  width: 130px !important;
+  height: 25px !important;
+  background: rgb(103, 168, 42) !important;
+  border: rgb(103, 168, 42) !important;
+  border-radius: 5px !important;
+  color: white !important;
+  font-weight: bold !important;
+}
+
+.datosEstadisticas{
+  width: 50%;
+  display: inline-block;
+}

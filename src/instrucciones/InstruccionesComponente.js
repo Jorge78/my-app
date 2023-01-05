@@ -1,16 +1,28 @@
 import '../instrucciones/InstruccionesComponente.css';
-import React, { useState } from 'react';
+//import React, { useState, useEffect } from 'react';
 
-function InstruccionesComponente(){
+function InstruccionesComponente({tipoTema, mostrarIns, setMostrarIns}){
 
-    const tema = localStorage.getItem('tema') == 'light' ? true : false;
-    const [show, evtJugar] = useState(true);
+    //const tema = localStorage.getItem('tema') == 'light' ? true : false;
+    //const valorMostrar = localStorage.getItem('mostrarInstrucciones') == 'show' ? true : false;
+    
+    //const valorMostrar = mostrar == 'show' ? true : false;
+    //const [show, setMostrar] = useState(valorMostrar);
+
+    /* useEffect(() => {
+        const valor = show ? 'show' : 'hide';
+        localStorage.setItem('instrucciones', valor);
+    }, [show]); */
+
+    const tema = tipoTema;
+    const show = mostrarIns;
+    const mostrarInstrucciones = setMostrarIns;
 
     return (
         <>
             { show ?
-                <div id="instrucciones" style={{backgroundColor: `${tema ? '#e2e3e4' : '#272b3b'}`}}>
-                    <div class="center font14 margin10 b">
+                (<div id="instrucciones" style={{backgroundColor: `${tema ? '#e2e3e4' : '#272b3b'}`}}>
+                    <div class="center margin10 b">
                         <label style={{color: `${tema ? '#000' : '#fff'}`}}>
                             Cómo jugar
                         </label>
@@ -120,10 +132,10 @@ function InstruccionesComponente(){
                         </label>
                     </div>
                     <div class="center font10 marginTop20">
-                        <button id="btnJugar" onClick={() => evtJugar(!show)}>¡JUGAR!</button>
+                        <button id="btnJugar" onClick={() => mostrarInstrucciones(false)}>¡JUGAR!</button>
                     </div>
                     <div class="center font10 margin10">&nbsp;</div>
-                </div> : <></>
+                </div>) : (<></>)
             }
         </>
     );

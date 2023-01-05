@@ -7,7 +7,7 @@ import dark from '../juego/dark.jpg'
 import '../juego/JuegoComponente.css';
 import React, { useState, useEffect } from 'react';
 
-function JuegoComponente() {
+function JuegoComponente({setMostrarIns, setMostrarEst}) {
 
     let letras = "";
     let valorLetra = "";
@@ -18,22 +18,25 @@ function JuegoComponente() {
     let rValue = myArray[rand];
     alert(rValue); */
 
-    let palabraGuardada = localStorage.getItem('palabra');
+    //let palabraGuardada = localStorage.getItem('palabra');
 
     const valorTema = localStorage.getItem('tema') == 'light' ? true : false;
     const [tema, setValue] = useState(valorTema);
-
+    
     useEffect(() => {
         const valor = tema ? 'light' : 'dark';
         localStorage.setItem('tema', valor);
     }, [tema]);
 
-    const mostrarInstrucciones = () => {
-        alert("Mostrar instrucciones");
+    const muestraInstrucciones = () => {
+        //localStorage.setItem('mostrarInstrucciones', 'show');
+        setMostrarIns(true);
+        //alert("Mostrar instrucciones");
     }
 
     const mostrarResultados = () => {
-        alert("Mostrar resultados");
+        setMostrarEst(true);
+        //alert("Mostrar resultados");
     }
 
     const agregarLetra = (letra) => {
@@ -70,15 +73,16 @@ function JuegoComponente() {
     }
 
     return (
+        <>
         <div id="contFullJuego" style={{backgroundColor: `${tema ? '#e2e3e4' : '#272b3b'}`}}>
             <div id="contJuego">
                 
-                <div id="contCabecera" class="center font14 margin10 b"
+                <div id="contCabecera" class="center margin10 b"
                     style={{ 
                         background: `${tema ? '#DCDCDC' : '#313545'}`
                     }}
                 >
-                    <div id="iconInstrucciones" align="left" class="alinear alinearIcono" onClick={mostrarInstrucciones}>
+                    <div id="iconInstrucciones" align="left" class="alinear alinearIcono" onClick={() => muestraInstrucciones()}>
                         <img src={`${tema ? iconoAyudaLight : iconoAyudaDark}`} alt="Instrucciones" />
                     </div>
                     <div id="tituloJuego" class="alinear">
@@ -109,7 +113,7 @@ function JuegoComponente() {
                                     <span 
                                         className={`react-switch-button`}
                                         style={{ 
-                                            background: `${tema ? '#FCDD55' : '#fff'}`
+                                            background: `${tema ? '#FCDD55' : '#FFFFFF'}`
                                         }}
                                     />
                                 </label>
@@ -399,6 +403,7 @@ function JuegoComponente() {
                 </div>
             </div>
         </div>
+        </>
     );
   }
   
