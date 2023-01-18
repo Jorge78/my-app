@@ -19,38 +19,38 @@ export const EstadisticasComponente = ({tipoTema, mostrarEst, setMostrarEst, rel
                             color: `${tema ? '#000' : '#fff'}`
                         }
                     }>
-                        <div class="center margin10 b">
+                        <div className="center margin10 b">
                             <label style={{color: `${tema ? '#000' : '#fff'}`}}>
                                 Estadísticas
                             </label>
                         </div>
-                        <div id="contDatos" class="font14 margin10">
-                            <div id="jugadas" class="datosEstadisticas">
+                        <div id="contDatos" className="font14 margin10">
+                            <div id="jugadas" className="datosEstadisticas">
                                 <br/>
-                                <label id="numJugadas" class="b">8</label>
+                                <label id="numJugadas" className="b">8</label>
                                 <br/>
                                 <label>Jugadas</label>
                             </div>
-                            <div id="victorias" class="datosEstadisticas">
+                            <div id="victorias" className="datosEstadisticas">
                                 <br/>
-                                <label id="numVictorias" class="b">2</label>
+                                <label id="numVictorias" className="b">2</label>
                                 <br/>
                                 <label>Victorias</label>
                             </div>
                         </div>
                         {tiempo && 
-                            <div id="contTiempo" class="font14 margin10">
+                            <div id="contTiempo" className="font14 margin10">
                                 <br/>
-                                <label class="font12">SIGUIENTE PALABRA</label>
+                                <label className="font12">SIGUIENTE PALABRA</label>
                                 <br/>
-                                {/* <label class="b">04:10</label> */}
-                                <label class="b">{mins < 10 ? `0${mins}` : mins}:{secs < 10 ? `0${secs}` : secs}</label>
+                                {/* <label className="b">04:10</label> */}
+                                <label className="b">{mins < 10 ? `0${mins}` : mins}:{secs < 10 ? `0${secs}` : secs}</label>
                             </div>
                         }
-                        <div class="center font10 marginTop20">
+                        <div className="center font10 marginTop20">
                             <button id="btnAceptar" onClick={() => mostrarEstadisticas(false)}>Aceptar</button>
                         </div>
-                        <div class="center font10 margin10">&nbsp;</div>
+                        <div className="center font10 margin10">&nbsp;</div>
                     </div>
             }
         </>
