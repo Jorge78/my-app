@@ -9,12 +9,12 @@ function App() {
   let tema = localStorage.getItem('tema');
   let muestraTema = tema ? tema : 'light';
   localStorage.setItem('tema', muestraTema);
-  let valorTema = muestraTema == 'light' ? true : false;
+  let valorTema = muestraTema === 'light' ? true : false;
 
   let instrucciones = localStorage.getItem('instrucciones');
   let muestraInstrucciones = instrucciones ? instrucciones : 'show';
   localStorage.setItem('instrucciones', muestraInstrucciones);
-  let valorMostrarInstrucciones = muestraInstrucciones == 'show' ? true : false;
+  let valorMostrarInstrucciones = muestraInstrucciones === 'show' ? true : false;
   const [mostrarInstrucciones, setMostrarInstrucciones] = useState(valorMostrarInstrucciones);
 
   const [mostrarEstadisticas, setMostrarEstadisticas] = useState(false);
@@ -29,7 +29,7 @@ function App() {
   const [mins, setMinutes] = useState(startingMinutes);
   const [secs, setSeconds] = useState(startingSeconds);
   const [tiempo, setTiempo] = useState(true);
-  useEffect(() => {
+  /* useEffect(() => {
     if(tiempo){
       let sampleInterval = setInterval(() => {
         if (secs > 0) {
@@ -50,7 +50,7 @@ function App() {
         };
     }
       
-  }, []);
+  }, []); */
 
   return (
     <div className="App">
