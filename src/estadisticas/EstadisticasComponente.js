@@ -38,7 +38,7 @@ export const EstadisticasComponente = ({tipoTema, mostrarEst, setMostrarEst/* , 
                                 <label>Victorias</label>
                             </div>
                         </div>
-                        {tiempo && 
+                        {/* {tiempo && */} 
                             <div id="contTiempo" className="font14 margin10">
                                 <br/>
                                 <label className="font12">SIGUIENTE PALABRA</label>
@@ -46,7 +46,7 @@ export const EstadisticasComponente = ({tipoTema, mostrarEst, setMostrarEst/* , 
                                 <label className="b">04:10</label>
                                 {/* <label className="b">{mins < 10 ? `0${mins}` : mins}:{secs < 10 ? `0${secs}` : secs}</label> */}
                             </div>
-                        }
+                        {/* } */}
                         <div className="center font10 marginTop20">
                             <button id="btnAceptar" onClick={() => mostrarEstadisticas(false)}>Aceptar</button>
                         </div>
