@@ -1,14 +1,14 @@
 import React from 'react'
 import '../estadisticas/EstadisticasComponente.css'
 
-export const EstadisticasComponente = ({tipoTema, mostrarEst, setMostrarEst, reloj}) => {
+export const EstadisticasComponente = ({tipoTema, mostrarEst, setMostrarEst/* , reloj */}) => {
 
     const tema = tipoTema;
     const show = mostrarEst;
     const mostrarEstadisticas = setMostrarEst;
-    const tiempo = reloj[0];
+    /* const tiempo = reloj[0];
     const mins = reloj[1];
-    const secs = reloj[2];
+    const secs = reloj[2]; */
     return (
         <>
             {
@@ -43,8 +43,8 @@ export const EstadisticasComponente = ({tipoTema, mostrarEst, setMostrarEst, rel
                                 <br/>
                                 <label className="font12">SIGUIENTE PALABRA</label>
                                 <br/>
-                                {/* <label className="b">04:10</label> */}
-                                <label className="b">{mins < 10 ? `0${mins}` : mins}:{secs < 10 ? `0${secs}` : secs}</label>
+                                <label className="b">04:10</label>
+                                {/* <label className="b">{mins < 10 ? `0${mins}` : mins}:{secs < 10 ? `0${secs}` : secs}</label> */}
                             </div>
                         }
                         <div className="center font10 marginTop20">

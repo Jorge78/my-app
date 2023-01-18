@@ -24,12 +24,12 @@ function App() {
       localStorage.setItem('instrucciones', valor);
   }, [mostrarInstrucciones]);
 
-  const startingMinutes = 5;
+  /* const startingMinutes = 5;
   const startingSeconds = 0;
   const [mins, setMinutes] = useState(startingMinutes);
   const [secs, setSeconds] = useState(startingSeconds);
   const [tiempo, setTiempo] = useState(true);
-  /* useEffect(() => {
+  useEffect(() => {
     if(tiempo){
       let sampleInterval = setInterval(() => {
         if (secs > 0) {
@@ -71,7 +71,7 @@ function App() {
             tipoTema={valorTema}
             mostrarEst={mostrarEstadisticas}
             setMostrarEst={setMostrarEstadisticas}
-            reloj={[tiempo, mins, secs]}
+            /* reloj={[tiempo, mins, secs]} */
           />
         }
       </header>
